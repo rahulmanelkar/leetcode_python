@@ -27,9 +27,26 @@ class LinkedList:
         pass
 
     def print(self):
-        pass
+        node = self.head
+        if node is None:
+            print("Empty")
+            return
+        ll_text = ''
+        while node:
+            ll_text += str(node.data) + '-->'
+            node = node.next
+
+        print(ll_text)
+        return 
 
     def return_as_list(self):
         pass
 
 
+if __name__=='__main__':
+    ll = LinkedList()
+    ll.insert_at_beginning(5)
+    ll.insert_at_beginning(25)
+    ll.insert_at_beginning(35)
+    ll.insert_at_beginning(54)
+    ll.print()
