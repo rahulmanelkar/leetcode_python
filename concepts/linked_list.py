@@ -11,7 +11,8 @@ class LinkedList:
         self.tail = None
 
     def insert_at_beginning(self,data):
-        pass
+        node = Node(data, next = self.head)
+        self.head = node
 
     def insert_at_end(self,data):
         pass
@@ -23,6 +24,12 @@ class LinkedList:
         pass
 
     def insert_values(self,values):
+        pass
+
+    def print(self):
+        pass
+
+    def return_as_list(self):
         pass
 
 
