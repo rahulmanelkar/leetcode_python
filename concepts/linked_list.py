@@ -4,11 +4,13 @@ class Node:
     def __init__(self, data:Any, next=None, prev=None):
         self.data = data
         self.next = next
+        
 
 class LinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
+        self.currentstate_text = ''
 
     def insert_at_beginning(self,data):
         node = Node(data, next = self.head)
@@ -26,7 +28,7 @@ class LinkedList:
     def insert_values(self,values):
         pass
 
-    def print(self):
+    def current_state(self):
         node = self.head
         if node is None:
             print("Empty")
@@ -36,7 +38,13 @@ class LinkedList:
             ll_text += str(node.data) + '-->'
             node = node.next
 
-        print(ll_text)
+        self.currentstate_text = ll_text
+        return self.currentstate_text
+
+
+    def print(self):
+        self.current_state()
+        print(self.currentstate_text)
         return 
 
     def return_as_list(self):
