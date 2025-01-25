@@ -48,7 +48,15 @@ class LinkedList:
         return 
 
     def return_as_list(self):
-        pass
+        node = self.head
+        if node is None:
+            return None
+        ll_list = []
+        while node:
+            ll_list.append(node.data)
+            node = node.next
+
+        return ll_list
 
 
 if __name__=='__main__':
