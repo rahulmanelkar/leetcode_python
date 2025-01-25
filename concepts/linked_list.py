@@ -26,7 +26,8 @@ class LinkedList:
         pass
 
     def insert_values(self,values):
-        pass
+        for i in values:
+            self.insert_at_beginning(i)
 
     def current_state(self):
         node = self.head
@@ -40,7 +41,6 @@ class LinkedList:
 
         self.currentstate_text = ll_text
         return self.currentstate_text
-
 
     def print(self):
         self.current_state()
