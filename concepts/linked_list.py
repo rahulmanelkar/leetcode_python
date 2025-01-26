@@ -20,6 +20,7 @@ class LinkedList:
 
     def insert_at_end(self,data):
         pass
+          
 
     def insert_at(self,data):
         pass
