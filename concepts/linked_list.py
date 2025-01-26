@@ -15,6 +15,8 @@ class LinkedList:
     def insert_at_beginning(self,data):
         node = Node(data, next = self.head)
         self.head = node
+        if not self.tail:
+            self.tail = node
 
     def insert_at_end(self,data):
         pass
